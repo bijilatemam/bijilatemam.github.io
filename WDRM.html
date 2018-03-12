@@ -11,12 +11,15 @@
   var conf = {
     key: "02211124-a6c9-4343-bfcb-f383c33a630d",
     source: {
-        dash: "https://bijilatemam.github.io/DRM_Enabled/Vatican_Widevine/output/stream.mpd",
-      drm: {
-          widevine: {
-              LA_URL: 'https://widevine-dash.ezdrm.com/proxy?pX=167694'
-          }
-      }
+        dash: "https://bijilatemam.github.io/DRM_Enabled/Vatican_Both/output/stream.mpd",
+        drm: {
+            widevine: {
+                LA_URL: 'https://widevine-dash.ezdrm.com/proxy?pX=167694'
+            },
+            playready: {
+                LA_URL: 'https://playready.ezdrm.com/cency/preauth.aspx?pX=E80546'
+            }
+        }
     }
   };
   var player = bitmovin.player('my-player');
